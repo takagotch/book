@@ -1,3 +1,10 @@
-<p>name:   <%= @book.title %>,
-   author: <%= @book.author %>,
-   price:  <%= @book.price %>yen</p>
+<%= form_for @book do |form| %>
+#<p>name:   <%= @book.title %>,
+#   author: <%= @book.author %>,
+#   price:  <%= @book.price %>yen</p>
+<p><%= form.text-field :title %></p>
+<p><%= form.text-field :author %></p>
+<p><%= form.text-field :price%></p>
+<p><%= form.submit %></p>
+<% end %>
+
