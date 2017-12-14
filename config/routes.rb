@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
 
   resources :books
+  resources :account
+  namespace :admin do
+    resources :users
+  end
 end
 
 #index   book         GET
