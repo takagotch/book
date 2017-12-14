@@ -1,6 +1,12 @@
 class BooksController < ApplicationController
 def index
-	@books = Book.order("title")
+   #@books = Book.order("title")
+  if params[:shelf_id]
+    @shelf = shelf.find (params[:shelf.id])
+    @books = @shelf.books.order("title")
+  else
+    @books = Book.order("title")
+  end
 end
 
 def show

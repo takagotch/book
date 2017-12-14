@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
   end
+  resources :shelves
+    resources :books
+  end
+  resources :books
 end
 
 #index   book         GET
