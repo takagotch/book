@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      book: book
+    attributes:
+      book:
+        title:  les-fleurs-du-mal
+        author: Baudelaire
+        price:  1000yen
+
