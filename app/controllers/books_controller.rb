@@ -20,7 +20,12 @@ end
 def update
 	@book = Member.find(params[:id])
 	@book.save
-	redirect_to @book, notice: "update"
+       #redirect_to @book, notice: "update"
+       if @book.save
+         redirect_to @book, notice : "update."
+       else
+         render "edit"
+       end
 end
 
 end
